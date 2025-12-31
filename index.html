@@ -16,7 +16,12 @@
             <a class="brand" href="#">
                 <img src="img/logo.png" alt="FJOSTE Logo" class="logo site-logo">
             </a>
-               <div class="site-title">FJOSTE Group</div>
+            <div class="site-title">FJOSTE Group</div>
+            <button class="nav-toggle" aria-label="Menü umschalten">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
             <nav class="nav">
                 <a href="#" class="btn ghost team-btn">Home</a>
                 <a href="gallery.html" class="btn ghost team-btn">Galerie</a>
@@ -31,7 +36,7 @@
     <main class="hero home-hero">
         <div class="hero-overlay"></div>
         <div class="container">
-            <section class="hero-intro">
+            <section class="hero-intro card">
                 <h2>🚛 Über die FJOSTE Group</h2>
                 <p>Willkommen bei der FJOSTE Group, Deiner virtuellen Spedition auf TruckersMP, in der Leidenschaft auf Professionalität trifft.</p>
                 <p>Seit unserer Gründung stehen wir für mehr als nur den Transport von A nach B: Wir sind eine eng verbundene Community, die den Spaß am virtuellen Trucking in den Vordergrund stellt. Egal, ob Du mit ETS2 oder ATS unterwegs bist – bei uns findest Du Gleichgesinnte.</p>
@@ -60,5 +65,10 @@
         </div>
     </footer>
     <script src="vtc-widget.js" defer></script>
+    <script>
+      document.querySelector('.nav-toggle').addEventListener('click', () => {
+        document.querySelector('.nav').classList.toggle('open');
+      });
+    </script>
 </body>
 </html>

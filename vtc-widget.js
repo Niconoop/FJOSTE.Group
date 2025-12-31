@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const profit = (typeof ag.profitTotal === 'number' && !isNaN(ag.profitTotal)) ? formatMoney(ag.profitTotal) : '—';
     const distance = (typeof job.distance_client === 'number' && job.distance_client) ? `${job.distance_client} km` : '';
     // Render collapsed card: title, small route (from→to), driver and basic stats
-    return `<article class="job-card" data-index="${idx}"><div class="job-head"><strong>${title}</strong><span>${escapeHtml(time)}</span></div>${routeDisplay?`<div class="job-sub">${escapeHtml(routeDisplay)}</div>`:''}<p class="job-sub">Fahrer: ${driver} ${distance ? ' • '+escapeHtml(distance) : ''}</p><p class="job-sub">Einnahmen gesamt: ${escapeHtml(income)} • Ausgaben gesamt: ${escapeHtml(expense)} • Gewinn: ${escapeHtml(profit)}</p></article>`;
+    return `<article class="job-card card" data-index="${idx}"><div class="job-head"><strong>${title}</strong><span>${escapeHtml(time)}</span></div>${routeDisplay?`<div class="job-sub">${escapeHtml(routeDisplay)}</div>`:''}<p class="job-sub">Fahrer: ${driver} ${distance ? ' • '+escapeHtml(distance) : ''}</p><p class="job-sub">Einnahmen gesamt: ${escapeHtml(income)} • Ausgaben gesamt: ${escapeHtml(expense)} • Gewinn: ${escapeHtml(profit)}</p></article>`;
   }
 
   function showJobDetails(job){
